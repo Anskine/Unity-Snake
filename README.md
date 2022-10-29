@@ -71,6 +71,7 @@ Eine Kamera, die Snake, Food, Wände
 - Wand duplizieren
   - Position: Y=-12
 - Alle Wände gemeinsam markieren und zu *Wall* umbenennen
+- Allen Wänden einen *BoxCollider2D* hinzufügen und IsTrigger=True setzen
 
 ### Bewegung der Schlange
 - Im Assets Verzeichnis neuen Ordner *Scripts* anlegen
@@ -106,8 +107,8 @@ private void Update() {
 ```c#
 private void FixedUpdate() {
   this.transform.position = new Vector3(
-    Math.Round(this.transform.position.x) + _direction.x, // runden auf ganze Koordinaten
-    Math.Round(this.transform.position.y) + _direction.y, // just in case... 
+    Mathf.Round(this.transform.position.x) + _direction.x, // runden auf ganze Koordinaten
+    Mathf.Round(this.transform.position.y) + _direction.y, // just in case... 
     0.0f
   );
 }
