@@ -13,7 +13,7 @@ See the example [GitHub repository here](https://github.com/zigurous/unity-snake
   - Dann die Inhalte aus dem Verzeichnis Snake nach Unity-Snake verschieben
   - In TortoiseGit "Add" ausführen und die vorgeschlagenen Dateien hinzufügen -> Commit -> Push
   - Nun den Unity Editor wieder öffnen und das Projet Unity-Snake hinzufügen und öffnen
-- Sample Scene zu `Snake` umbennen
+- Sample Scene zu `Snake` umbennen (in der Project View -> Assets -> Scenes)
 - Hintergrundfarbe ändern:
   - Links in der Hierarchy *MainCamera* auswählen
   - Background Farbe ändern auf *schwarz*  
