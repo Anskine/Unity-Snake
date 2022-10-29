@@ -13,7 +13,7 @@ See the example [GitHub repository here](https://github.com/zigurous/unity-snake
   - Dann die Inhalte aus dem Verzeichnis Snake nach Unity-Snake verschieben
   - In TortoiseGit "Add" ausführen und die vorgeschlagenen Dateien hinzufügen -> Commit -> Push
   - Nun den Unity Editor wieder öffnen und das Projet Unity-Snake hinzufügen und öffnen
-- Sample Scene zu `Snake` umbennen
+- Sample Scene zu `Snake` umbennen (in der Project View -> Assets -> Scenes)
 - Hintergrundfarbe ändern:
   - Links in der Hierarchy *MainCamera* auswählen
   - Background Farbe ändern auf *schwarz*  
@@ -71,6 +71,7 @@ Eine Kamera, die Snake, Food, Wände
 - Wand duplizieren
   - Position: Y=-12
 - Alle Wände gemeinsam markieren und zu *Wall* umbenennen
+- Allen Wänden einen *BoxCollider2D* hinzufügen und IsTrigger=True setzen
 
 ### Bewegung der Schlange
 - Im Assets Verzeichnis neuen Ordner *Scripts* anlegen
@@ -106,8 +107,8 @@ private void Update() {
 ```c#
 private void FixedUpdate() {
   this.transform.position = new Vector3(
-    Math.Round(this.transform.position.x) + _direction.x, // runden auf ganze Koordinaten
-    Math.Round(this.transform.position.y) + _direction.y, // just in case... 
+    Mathf.Round(this.transform.position.x) + _direction.x, // runden auf ganze Koordinaten
+    Mathf.Round(this.transform.position.y) + _direction.y, // just in case... 
     0.0f
   );
 }
